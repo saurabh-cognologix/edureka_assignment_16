@@ -9,9 +9,9 @@ import java.util.List;
 
 @Service
 public class AccountServices {
-//    @Autowired
-//    private Account accountObj;
-    Account accountObj = new Account();
+    @Autowired
+    private Account accountObj;
+   // Account accountObj = new Account();
     private  static List<Account> accountList = new ArrayList<>();
 
     static {
@@ -27,7 +27,7 @@ public class AccountServices {
    public Double depositedAmount(Double deposit_amount){
        System.out.println("Amount Deposited In Account "+deposit_amount);
        accountObj.setTotalBalance(accountObj.getTotalBalance()+deposit_amount);
-      // System.out.println("Total Balance is "+accountObj.getTotalBalance());
+       System.out.println("Total Balance is "+accountObj.getTotalBalance());
         return deposit_amount;
     }
 

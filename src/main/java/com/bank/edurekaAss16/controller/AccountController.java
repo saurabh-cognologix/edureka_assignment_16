@@ -20,7 +20,7 @@ public class AccountController {
 
 
    // create new transaction
-    @PostMapping("/deposit/{accountNumber}")
+    @PutMapping("/deposit/{accountNumber}")
     public Double depositedAmount(@RequestBody Account account, @PathVariable("accountNumber") Integer accountNumber){
         return this.accountServices.depositedAmount(account.getDepositAmount());
     }
