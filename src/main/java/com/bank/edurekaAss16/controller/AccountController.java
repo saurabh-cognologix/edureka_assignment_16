@@ -24,4 +24,9 @@ public class AccountController {
     public Double depositedAmount(@RequestBody Account account, @PathVariable("accountNumber") Integer accountNumber){
         return this.accountServices.depositedAmount(account.getDepositAmount());
     }
+
+    @PutMapping("/withdraw/{accountNumber}")
+    public Double withdrawAmount(@RequestBody Account account, @PathVariable("accountNumber") Integer accountNumber){
+        return this.accountServices.depositedAmount(account.getDepositAmount());
+    }
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class Account {
     private Integer accountNumber;
     private String accountHolderName;
-    private Double totalBalance;
+    private Double totalBalance = 100.00;
     private Double depositAmount;
     private Double withdrawAmount;
 }

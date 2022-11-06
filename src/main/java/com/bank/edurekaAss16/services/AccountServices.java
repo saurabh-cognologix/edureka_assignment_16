@@ -27,17 +27,16 @@ public class AccountServices {
    public Double depositedAmount(Double deposit_amount){
        System.out.println("Amount Deposited In Account "+deposit_amount);
        accountObj.setTotalBalance(accountObj.getTotalBalance()+deposit_amount);
-       System.out.println("Total Balance is "+accountObj.getTotalBalance());
+
+      System.out.println("Total Balance is "+accountObj.getTotalBalance());
         return deposit_amount;
     }
+    public Double withDrawAmount(Double withdraw_amount){
+        System.out.println("Amount Deposited In Account "+withdraw_amount);
+        accountObj.setTotalBalance(accountObj.getTotalBalance()-withdraw_amount);
+        System.out.println("Total Balance is "+accountObj.getTotalBalance());
+        return withdraw_amount;
+    }
 
-//    public void withdraw(Double withdraw_amount){
-//       if(account.getTotalBalance() >=withdraw_amount){
-//          // Double updateBalance =  account.setTotalBalance(account.getTotalBalance()-withdraw_amount);
-//          // System.out.println("After withdraw :"+updateBalance);
-//       }else{
-//           System.out.println("You can not withdraw the amount....");
-//       }
-//        //System.out.println(updatedBalance);
-//    }
+
 }
